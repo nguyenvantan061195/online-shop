@@ -1,0 +1,40 @@
+﻿Migrations For ApplicationDbContext:
+Add-Migration -Context Domain.DbContexts.ApplicationDbContext -OutputDir Migrations
+Update-Database -Context Domain.DbContexts.ApplicationDbContext -Verbose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Migrations For ShopDbContext:
+Add-Migration -Context Domain.DbContexts.ShopDbContext -OutputDir Migrations/Shop
+Update-Database -Context Domain.DbContexts.ShopDbContext -Verbose
