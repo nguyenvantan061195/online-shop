@@ -6,7 +6,7 @@ Gõ lệnh: Git Status
 3.Thêm và sửa đổi file trong Project
 Gõ lệnh: Git Add (tên file ví dụ index.txt) hoặc thêm tất cả Git add *
 Gõ lệnh: Git Status
-Gõ lệnh: Git Commit
+Gõ lệnh: Git Commit - m "comment"
 4.Đưa lên server GitHub
 Gõ lệnh: Git Push
 Gõ lệnh: Git Status
