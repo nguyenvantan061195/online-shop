@@ -34,3 +34,12 @@ G:\Project\shop\WEB\WebApp\Domain\obj\Debug\netcoreapp2.0\Domain.AssemblyInfoInp
 G:\Project\shop\WEB\WebApp\Domain\obj\Debug\netcoreapp2.0\Domain.AssemblyInfo.cs
 G:\Project\shop\WEB\WebApp\Domain\obj\Debug\netcoreapp2.0\Domain.dll
 G:\Project\shop\WEB\WebApp\Domain\obj\Debug\netcoreapp2.0\Domain.pdb
+G:\online-shop\WEB\Domain\bin\Debug\netcoreapp2.0\Domain.deps.json
+G:\online-shop\WEB\Domain\bin\Debug\netcoreapp2.0\Domain.dll
+G:\online-shop\WEB\Domain\bin\Debug\netcoreapp2.0\Domain.pdb
+G:\online-shop\WEB\Domain\obj\Debug\netcoreapp2.0\Domain.csprojResolveAssemblyReference.cache
+G:\online-shop\WEB\Domain\obj\Debug\netcoreapp2.0\Domain.csproj.CoreCompileInputs.cache
+G:\online-shop\WEB\Domain\obj\Debug\netcoreapp2.0\Domain.AssemblyInfoInputs.cache
+G:\online-shop\WEB\Domain\obj\Debug\netcoreapp2.0\Domain.AssemblyInfo.cs
+G:\online-shop\WEB\Domain\obj\Debug\netcoreapp2.0\Domain.dll
+G:\online-shop\WEB\Domain\obj\Debug\netcoreapp2.0\Domain.pdb
