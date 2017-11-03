@@ -23,7 +23,11 @@ namespace Domain.DbContexts
         public virtual DbSet<Permission> Permissions { set; get; }
         public virtual DbSet<AspNetRole> AspNetRoles { set; get; }
         public virtual DbSet<AspNetUser> AspNetUser { set; get; }
-
+        public virtual DbSet<ProductImages> ProductImages { set; get; }
+        public virtual DbSet<Product> Products { set; get; }
+        public virtual DbSet<Comment> Comments { set; get; }
+        public virtual DbSet<ProductCategory> ProductCategories { set; get; }
+        public virtual DbSet<ProductGroup> ProductGroups { set; get; }
         // Config Table
         protected override void OnModelCreating(ModelBuilder builder)
         {

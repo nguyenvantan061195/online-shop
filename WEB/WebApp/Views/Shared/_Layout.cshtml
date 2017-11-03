@@ -37,9 +37,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2017 - Admin Nguyễn Văn Tấn</p>
-        </footer>
+        @await Html.PartialAsync("_Footer")
     </div>
 
     <environment include="Development">
