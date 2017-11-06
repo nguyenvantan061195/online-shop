@@ -1,0 +1,313 @@
+/* here you can put your own css to customize and override the theme */
+@media (min-width: 992px) {
+    .page-on-scroll .page-header .navbar-fixed-top {
+        padding: 5px 15px;
+    }
+}
+
+.icon-remove {
+	background-image: url('../../../../../images/icon_remove.png') !important;
+	background-repeat: no-repeat !important;
+	display: block;
+	opacity: 1;
+	width: 30px;
+	height: 30px;
+}
+
+.center-icon-popup {
+    margin: 9px 18px;
+}
+
+.downline {
+	margin-top: 10px;
+} 
+
+span.close {
+	background-image: none;
+	text-indent: inherit;
+}
+
+
+.modal-body {
+    background: #F9F9F9;
+}
+
+.modal-footer {
+    background: #F9F9F9;
+}
+
+.page-header .navbar .navbar-nav.navbar-right .dropdown-menu {
+    border: 1px solid #000 !important;
+    border-top-width: 0 !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.table-toolbar {
+    margin-bottom: 10px !important;
+}
+
+    .table-toolbar .actions a {
+        margin-left: 5px !important;
+    }
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.text-right {
+    text-align: right !important
+}
+
+.text-center, .tcenter {
+    text-align: center !important
+}
+
+.tupper {
+    text-transform: uppercase;
+}
+
+.text-left {
+	text-align: left !important;
+	margin-left: -15px;
+	margin-top: 6px
+}
+
+.nowrap {
+    white-space: nowrap
+}
+
+.htmlview {
+    border: 1px solid #ddd;
+    padding: 5px;
+    box-shadow: 0 0 4px 1px #ddd;
+    min-height: 30px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.textview {
+    border: 1px solid #ddd;
+    padding: 5px;
+    min-height: 30px;
+}
+
+    .textview p {
+        margin: 0;
+    }
+
+ul.list-attach {
+    padding: 0 10px;
+    margin: 0;
+}
+
+    ul.list-attach li {
+        list-style: none;
+    }
+
+.mt-checkbox {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.form .form-bordered .form-group > div {
+    padding: 10px;
+}
+
+.form .form-bordered .form-group .control-label {
+    padding-top: 15px;
+}
+
+.form .form-no-bordered .form-group {
+    border: none !important;
+}
+
+.form-control {
+    /*height: 26px;
+    padding: 2px;*/
+}
+
+.btn-group-sm > .btn, .btn-sm {
+    /*padding: 3px 7px;*/
+}
+
+.input-group-sm > .input-group-btn > select.btn, .input-group-sm > select.form-control, .input-group-sm > select.input-group-addon, select.input-sm {
+    /*height: 25px;
+    line-height: 25px;*/
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.tree-grid .btn-icon-only {
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    padding: 2px 0 0 !important;
+    margin: 0 !important;
+}
+
+.tree-grid .btn-group {
+    border: 1px solid #7dc4f9;
+}
+
+.modal-max {
+    width: 97%;
+}
+
+.modal-90 {
+    width: 90%;
+}
+
+.modal-80 {
+    width: 80%;
+}
+
+.modal-70 {
+    width: 70%;
+}
+
+.modal-60 {
+    width: 60%;
+}
+
+.modal-50 {
+    width: 50%;
+}
+
+.modal-footer, .modal-header {
+    padding: 10px;
+}
+
+.modal-header {
+    color: #fff;
+    padding: 5px 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #428bca;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.mw70 {
+    min-width: 70px !important;
+}
+
+.mw80 {
+    min-width: 80px !important;
+}
+
+.mw90 {
+    min-width: 90px !important;
+}
+
+.mw100 {
+    min-width: 100px !important;
+}
+
+.mw110 {
+    min-width: 110px !important;
+}
+
+.mw120 {
+    min-width: 120px !important;
+}
+
+.mw130 {
+    min-width: 130px !important;
+}
+
+.mw140 {
+    min-width: 140px !important;
+}
+
+.mw150 {
+    min-width: 150px !important;
+}
+
+.mw160 {
+    min-width: 160px !important;
+}
+
+.mw170 {
+    min-width: 170px !important;
+}
+
+.mw180 {
+    min-width: 180px !important;
+}
+
+.mw190 {
+    min-width: 190px !important;
+}
+
+.mw200 {
+    min-width: 200px !important;
+}
+
+
+
+
+/***
+TODO Page
+***/
+/* Cubic Bezier Transition */
+
+.todo-ui .portlet.light {
+    padding: 12px 12px 15px;
+}
+
+.todo-sidebar {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.todo-content {
+    overflow: hidden;
+}
+
+.todo-tasklist-item-border-green {
+    border-left: #3faba4 2px solid;
+}
+
+.todo-tasklist-item-border-blue {
+    border-left: #4c87b9 2px solid;
+}
+
+.todo-tasklist-item-border-purple {
+    border-left: #8877a9 2px solid;
+}
+
+.todo-tasklist-item-border-red {
+    border-left: #d05454 2px solid;
+}
+
+.todo-tasklist-item-border-yellow {
+    border-left: #d4ad38 2px solid;
+}
+
+.padding-top-10px {
+    padding-top: 15px;
+}
+
+.todo-userpic {
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+    border: 1px #cedae1 solid;
+}
+
+.todo-text-color {
+    color: #45535b;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+.sorting_disabled
+{
+    background-image:none !important;
+}

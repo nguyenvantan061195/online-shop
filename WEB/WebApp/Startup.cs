@@ -14,7 +14,6 @@ using Domain.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using WebApp.Models;
-using Microsoft.AspNetCore.Authentication.Facebook;
 
 namespace WebApp
 {
@@ -80,11 +79,9 @@ namespace WebApp
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-            });
-            app.UseMvc(routes =>
-            {
+
                 routes.MapRoute(
-                  name: "areas",
+                  name: "areaRoute",
                   template: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}"
                 );
             });
