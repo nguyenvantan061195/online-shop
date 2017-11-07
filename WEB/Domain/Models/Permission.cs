@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,14 +14,10 @@ namespace Domain.Models
         public int Id { get; set; }
         public int? GroupUserId { get; set; }
         public virtual GroupUser GroupUser { get; set; }
-
-        [StringLength(50)]
         public string UserId { get; set; }
-        public virtual AspNetUser User { get; set; }
-
-        [StringLength(50)]
+        public virtual ApplicationUser User { get; set; }
         public string RoleId { get; set; }
-        public virtual AspNetRole Role { get; set; }
+        public virtual IdentityRole Role { get; set; }
     }
 
     public class PermissionModel

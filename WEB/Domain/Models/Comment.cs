@@ -10,7 +10,8 @@ namespace Domain.Models
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { set; get; }
-        public string Value { set; get; }
+        public string CommentCode { set; get; }
+        public string CommentValue { set; get; }
         public int? CreatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int? UpdatedBy { get; set; }

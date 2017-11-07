@@ -11,8 +11,8 @@ using System;
 namespace Domain.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20171103125755_CreateShopTables")]
-    partial class CreateShopTables
+    [Migration("20171107161841_CreateAllTables")]
+    partial class CreateAllTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,17 +63,37 @@ namespace Domain.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<bool>("Active");
+
+                    b.Property<string>("Address");
+
+                    b.Property<DateTime>("Birthday");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<string>("FamilyName");
+
+                    b.Property<bool>("Gender");
+
+                    b.Property<string>("GivenName");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("MiddleName");
+
+                    b.Property<int>("MobilePhone");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256);
@@ -81,11 +101,15 @@ namespace Domain.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
 
+                    b.Property<int?>("OfficeNumber");
+
                     b.Property<string>("PasswordHash");
 
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("Picture");
 
                     b.Property<string>("SecurityStamp");
 
@@ -107,88 +131,14 @@ namespace Domain.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("Domain.Models.AspNetRole", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken();
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(256);
-
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
-
-                    b.ToTable("AspNetRoles");
-                });
-
-            modelBuilder.Entity("Domain.Models.AspNetUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("AccessFailedCount");
-
-                    b.Property<bool>("Active");
-
-                    b.Property<string>("ConcurrencyStamp");
-
-                    b.Property<string>("CreatedBy");
-
-                    b.Property<DateTime?>("CreatedDate");
-
-                    b.Property<string>("Email");
-
-                    b.Property<bool>("EmailConfirmed");
-
-                    b.Property<string>("FamilyName");
-
-                    b.Property<string>("GivenName");
-
-                    b.Property<bool>("LockoutEnabled");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd");
-
-                    b.Property<string>("MiddleName");
-
-                    b.Property<string>("NormalizedEmail");
-
-                    b.Property<string>("NormalizedUserName");
-
-                    b.Property<int?>("OfficeNumber");
-
-                    b.Property<string>("PasswordHash");
-
-                    b.Property<string>("PhoneNumber");
-
-                    b.Property<bool>("PhoneNumberConfirmed");
-
-                    b.Property<string>("Picture");
-
-                    b.Property<string>("SecurityStamp");
-
-                    b.Property<bool>("TwoFactorEnabled");
-
-                    b.Property<string>("UserName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AspNetUser");
-                });
-
             modelBuilder.Entity("Domain.Models.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CommentCode");
+
+                    b.Property<string>("CommentValue");
 
                     b.Property<int?>("CreatedBy");
 
@@ -204,13 +154,39 @@ namespace Domain.Migrations
 
                     b.Property<DateTime?>("UpdatedDate");
 
-                    b.Property<string>("Value");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
 
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("Domain.Models.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("CountryCode");
+
+                    b.Property<string>("CountryName");
+
+                    b.Property<int?>("CreatedBy");
+
+                    b.Property<int?>("DeletedBy");
+
+                    b.Property<DateTime?>("DeletedDate");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Note");
+
+                    b.Property<int?>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("Domain.Models.GroupUser", b =>
@@ -314,6 +290,40 @@ namespace Domain.Migrations
                     b.ToTable("LanguageText");
                 });
 
+            modelBuilder.Entity("Domain.Models.Manufacturer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Address");
+
+                    b.Property<string>("Code");
+
+                    b.Property<int?>("CreatedBy");
+
+                    b.Property<int?>("DeletedBy");
+
+                    b.Property<DateTime?>("DeletedDate");
+
+                    b.Property<string>("Description");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("LicenseNumber");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("TaxCode");
+
+                    b.Property<int?>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Manufacturers");
+                });
+
             modelBuilder.Entity("Domain.Models.Permission", b =>
                 {
                     b.Property<int>("Id")
@@ -321,11 +331,9 @@ namespace Domain.Migrations
 
                     b.Property<int?>("GroupUserId");
 
-                    b.Property<string>("RoleId")
-                        .HasMaxLength(50);
+                    b.Property<string>("RoleId");
 
-                    b.Property<string>("UserId")
-                        .HasMaxLength(50);
+                    b.Property<string>("UserId");
 
                     b.HasKey("Id");
 
@@ -342,8 +350,6 @@ namespace Domain.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Alias");
 
                     b.Property<string>("Caption");
 
@@ -363,6 +369,10 @@ namespace Domain.Migrations
 
                     b.Property<bool>("IsDeleted");
 
+                    b.Property<string>("Made");
+
+                    b.Property<string>("Note");
+
                     b.Property<decimal>("Price");
 
                     b.Property<int?>("ProductCategoryId");
@@ -371,13 +381,19 @@ namespace Domain.Migrations
 
                     b.Property<string>("ProductName");
 
+                    b.Property<int>("ProductType");
+
                     b.Property<float>("Promotion");
 
                     b.Property<int>("Quantity");
 
+                    b.Property<int>("Rate");
+
                     b.Property<int?>("UpdatedBy");
 
                     b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<int>("Views");
 
                     b.HasKey("Id");
 
@@ -390,8 +406,6 @@ namespace Domain.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Alias");
 
                     b.Property<string>("Caption");
 
@@ -426,12 +440,42 @@ namespace Domain.Migrations
                     b.ToTable("ProductCategories");
                 });
 
-            modelBuilder.Entity("Domain.Models.ProductGroup", b =>
+            modelBuilder.Entity("Domain.Models.ProductColor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Alias");
+                    b.Property<string>("Code");
+
+                    b.Property<int?>("CreatedBy");
+
+                    b.Property<int?>("DeletedBy");
+
+                    b.Property<DateTime?>("DeletedDate");
+
+                    b.Property<string>("Description");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<int?>("ProductId");
+
+                    b.Property<int?>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductColors");
+                });
+
+            modelBuilder.Entity("Domain.Models.ProductGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Caption");
 
@@ -492,6 +536,34 @@ namespace Domain.Migrations
                     b.ToTable("ProductImages");
                 });
 
+            modelBuilder.Entity("Domain.Models.ProvinceCity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("CreatedBy");
+
+                    b.Property<int?>("DeletedBy");
+
+                    b.Property<DateTime?>("DeletedDate");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Note");
+
+                    b.Property<string>("ProvinceCityCode");
+
+                    b.Property<string>("ProvinceCityName");
+
+                    b.Property<int?>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProvinceCities");
+                });
+
             modelBuilder.Entity("Domain.Models.UserInGroup", b =>
                 {
                     b.Property<int>("Id")
@@ -499,11 +571,9 @@ namespace Domain.Migrations
 
                     b.Property<int>("GroupUserId");
 
-                    b.Property<string>("RoleId")
-                        .HasMaxLength(250);
+                    b.Property<string>("RoleId");
 
-                    b.Property<string>("UserId")
-                        .HasMaxLength(50);
+                    b.Property<string>("UserId");
 
                     b.HasKey("Id");
 
@@ -514,6 +584,58 @@ namespace Domain.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserInGroup");
+                });
+
+            modelBuilder.Entity("Domain.Models.Ward", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("CreatedBy");
+
+                    b.Property<int?>("DeletedBy");
+
+                    b.Property<DateTime?>("DeletedDate");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Note");
+
+                    b.Property<int?>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("WardCode");
+
+                    b.Property<string>("WardName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Wards");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -621,12 +743,12 @@ namespace Domain.Migrations
                         .WithMany("Permissions")
                         .HasForeignKey("GroupUserId");
 
-                    b.HasOne("Domain.Models.AspNetRole", "Role")
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId");
 
-                    b.HasOne("Domain.Models.AspNetUser", "User")
-                        .WithMany("BEPermissions")
+                    b.HasOne("Domain.Models.ApplicationUser", "User")
+                        .WithMany("Permissions")
                         .HasForeignKey("UserId");
                 });
 
@@ -644,6 +766,13 @@ namespace Domain.Migrations
                         .HasForeignKey("ProductGroupId");
                 });
 
+            modelBuilder.Entity("Domain.Models.ProductColor", b =>
+                {
+                    b.HasOne("Domain.Models.Product")
+                        .WithMany("Colors")
+                        .HasForeignKey("ProductId");
+                });
+
             modelBuilder.Entity("Domain.Models.ProductImages", b =>
                 {
                     b.HasOne("Domain.Models.Product")
@@ -658,18 +787,18 @@ namespace Domain.Migrations
                         .HasForeignKey("GroupUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Domain.Models.AspNetRole", "Role")
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId");
 
-                    b.HasOne("Domain.Models.AspNetUser", "User")
-                        .WithMany("BEUserInGroups")
+                    b.HasOne("Domain.Models.ApplicationUser", "User")
+                        .WithMany("UserInGroups")
                         .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
-                    b.HasOne("Domain.Models.AspNetRole")
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -693,7 +822,7 @@ namespace Domain.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
-                    b.HasOne("Domain.Models.AspNetRole")
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);

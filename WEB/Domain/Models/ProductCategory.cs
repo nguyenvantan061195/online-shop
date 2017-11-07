@@ -16,7 +16,6 @@ namespace Domain.Models
         public int Id { set; get; }
         public string CategoryCode { set; get; }
         public string CategoryName { set; get; }
-        public string Alias { set; get; }
         public string Caption { set; get; }
         public string Description { set; get; }
         public DateTime? CreatedDate { get; set; }

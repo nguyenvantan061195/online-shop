@@ -12,7 +12,7 @@ namespace Domain.Models
         public GroupUser()
         {
             UserInGroups = new HashSet<UserInGroup>();
-           Permissions = new HashSet<Permission>();
+            Permissions = new HashSet<Permission>();
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
