@@ -11,8 +11,8 @@ using System;
 namespace Domain.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20171107161841_CreateAllTables")]
-    partial class CreateAllTables
+    [Migration("20171120140647_CreateAllTable")]
+    partial class CreateAllTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

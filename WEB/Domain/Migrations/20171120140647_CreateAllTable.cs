@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Domain.Migrations
 {
-    public partial class CreateAllTables : Migration
+    public partial class CreateAllTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
