@@ -3,8 +3,15 @@
 
 }
 <ul class="nav navbar-nav">
-    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+    <li><a asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+    <li>
+    <a asp-area="" asp-controller="Home" asp-action="About">Đồ điện tử</a>
+        <ul class="dropdown">
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Monitors</a></li>
+            <li><a href="#">Printers</a></li>
+        </ul>
+     </li>
+    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Thời trang</a></li>
 </ul>
 
