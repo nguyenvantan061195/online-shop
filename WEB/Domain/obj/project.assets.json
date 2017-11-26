@@ -9652,11 +9652,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "G:\\online-shop\\v1\\online-shop\\WEB\\Domain\\Domain.csproj",
+      "projectUniqueName": "G:\\projects\\online-shop\\WEB\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "G:\\online-shop\\v1\\online-shop\\WEB\\Domain\\Domain.csproj",
+      "projectPath": "G:\\projects\\online-shop\\WEB\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\tanva\\.nuget\\packages\\",
-      "outputPath": "G:\\online-shop\\v1\\online-shop\\WEB\\Domain\\obj\\",
+      "outputPath": "G:\\projects\\online-shop\\WEB\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

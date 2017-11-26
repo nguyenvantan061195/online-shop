@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="T&amp;T Shop" />
+    <meta name="description" content="T&amp;T Shop">
+    <meta name="author" content="T&amp;T Shop">
+    <title>@ViewData["Title"] - Trang quản lý bán hàng</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <!-- Font CSS (Via CDN) -->
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/vendor/plugins/magnific/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/vendor/plugins/powertip/jquery.powertip.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/vendor/plugins/select2/css/core.css">
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/vendor/plugins/datatables/media/css/dataTables.plugins.css">
+        @RenderSection("style_plugin", required: false)
+        <!-- Theme CSS -->
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/skin/default_skin/css/theme.min.css">
+        <!-- Admin Forms CSS -->
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/admin-tools/admin-forms/css/admin-forms.min.css">
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/css/sprite-dev-16.css" />
+        <link rel="stylesheet" type="text/css" href="~/lib/assets/css/admin.css" />
+        @RenderSection("style_custom", required: false)
+    </environment>
+    <environment include="Development">
+        <script src="~/lib/assets/vendor/jquery/jquery-3.1.1.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/jquery/jquery-migrate-3.0.0.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/jquery_ui/jquery-ui.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/jquery/jquery.cookie.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/jquery/jquery.signalR-2.2.1.min.js" asp-append-version="true"></script>
+        <!-- Page Plugins -->
+        <script src="~/lib/assets/vendor/plugins/magnific/jquery.magnific-popup.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/plugins/powertip/jquery.powertip.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/plugins/select2/select2.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/plugins/pnotify/pnotify.js" asp-append-version="true"></script>
+        <!-- Datatables -->
+        <script src="~/lib/assets/vendor/plugins/datatables/media/js/jquery.dataTables.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js" asp-append-version="true"></script>
+        <script src="~/lib/assets/vendor/plugins/datatables/media/js/dataTables.bootstrap.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body class="dashboard-page sb-l-o sb-r-c">
+    @Html.Partial("_Partial_SkinToolbox")
+    <div id="main">
+        <!-- Start: Header -->
+        @await Html.PartialAsync("_Partial_Header")
+        <!-- End: Header -->
+        <!-- Start: Sidebar Left -->
+        @await Html.PartialAsync("_Sidebar_Left")
+        <!-- End: Sidebar Left -->
+        <!-- Start: Content-Wrapper -->
+        <section id="content_wrapper">
+            <!-- Start: Topbar -->
+            @await Html.PartialAsync("_NavBar")
+            @*@Html.Partial("_Partial_Topbar")*@
+            <!-- End: Topbar -->
+            <!-- Begin: Content -->
+            <section id="content" class="animated fadeIn">
+                @RenderBody()
+            </section>
+            <!-- End: Content -->
+            <!-- Begin: Page Footer -->
+            @await Html.PartialAsync("_Footer")
+            <!-- End: Page Footer -->
+        </section>
+        <!-- End: Content-Wrapper -->
+    </div>
+</body>
+</html>

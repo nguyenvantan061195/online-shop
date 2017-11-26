@@ -14037,11 +14037,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "G:\\online-shop\\v1\\online-shop\\WEB\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "G:\\projects\\online-shop\\WEB\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "G:\\online-shop\\v1\\online-shop\\WEB\\WebApp\\WebApp.csproj",
+      "projectPath": "G:\\projects\\online-shop\\WEB\\WebApp\\WebApp.csproj",
       "packagesPath": "C:\\Users\\tanva\\.nuget\\packages\\",
-      "outputPath": "G:\\online-shop\\v1\\online-shop\\WEB\\WebApp\\obj\\",
+      "outputPath": "G:\\projects\\online-shop\\WEB\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14060,8 +14060,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "G:\\online-shop\\v1\\online-shop\\WEB\\Domain\\Domain.csproj": {
-              "projectPath": "G:\\online-shop\\v1\\online-shop\\WEB\\Domain\\Domain.csproj"
+            "G:\\projects\\online-shop\\WEB\\Domain\\Domain.csproj": {
+              "projectPath": "G:\\projects\\online-shop\\WEB\\Domain\\Domain.csproj"
             }
           }
         }
